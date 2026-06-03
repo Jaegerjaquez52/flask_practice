@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
-from wtforms.validators import DataRequired, ValidationError, Email, EqualTo, Length
+from wtforms.validators import DataRequired, ValidationError, Email, EqualTo, Length, length
 import sqlalchemy as sa
 from app import db
 from app.models import User
@@ -55,3 +55,6 @@ class EditProfileForm(FlaskForm):
 class EmptyForm(FlaskForm):
     submit = SubmitField('Submit')
 
+class PostForm(FlaskForm):
+    post = TextAreaField('Say something', validators=[DataRequired(), length(min=1, max=140)])
+    submit = SubmitField('Submit')
