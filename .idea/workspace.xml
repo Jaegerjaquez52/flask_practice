@@ -2,25 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="580aecd9-b4ba-4cf5-ad19-e360ce195bed" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/microblog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/microblog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/app.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/cli.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/email.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/errors.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/errors/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/errors/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/email/reset_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/email/reset_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/reset_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/reset_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/reset_password_request.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/reset_password_request.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/translate.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/translate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/auth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/errors/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/errors/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microblog.py" beforeDir="false" afterPath="$PROJECT_DIR$/microblog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -61,25 +54,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Flask server.microblog.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.__init__.executor": "Run",
-    "Python.microblog.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "ajax",
-    "last_opened_file_path": "C:/Users/user/Downloads/microblog/microblog",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Flask server.microblog.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.microblog.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;structure&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Downloads/microblog/microblog&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\Downloads\microblog\microblog" />
@@ -91,8 +84,33 @@
       <recent name="C:\Users\user\Downloads\microblog\app\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Flask server.microblog">
+  <component name="RunManager" selected="Python.microblog">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/microblog/app/templates/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="microblog" type="PythonConfigurationType" factoryName="Python">
+      <module name="microblog" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="microblog" type="Python.FlaskServer">
@@ -103,7 +121,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -114,8 +132,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Flask server.microblog" />
       <item itemvalue="JavaScript Debug.index.html" />
+      <item itemvalue="Flask server.microblog" />
+      <item itemvalue="Python.microblog" />
     </list>
     <recent_temporary>
       <list>
@@ -143,12 +162,21 @@
       <workItem from="1780403773441" duration="400000" />
       <workItem from="1780405115330" duration="4707000" />
       <workItem from="1780471512496" duration="17601000" />
-      <workItem from="1780644113733" duration="16478000" />
+      <workItem from="1780644113733" duration="17369000" />
+      <workItem from="1780903858322" duration="66000" />
+      <workItem from="1780905583532" duration="612000" />
+      <workItem from="1780909090158" duration="301000" />
+      <workItem from="1780911410770" duration="1611000" />
+      <workItem from="1780920103569" duration="4655000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
