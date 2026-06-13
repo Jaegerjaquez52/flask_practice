@@ -2,3 +2,143 @@
 2026-06-05 13:31:01,522 INFO: Microblog startup [in C:\Users\user\Downloads\microblog\app\__init__.py:55]
 2026-06-05 13:38:12,537 INFO: Microblog startup [in C:\Users\user\Downloads\microblog\app\__init__.py:55]
 2026-06-05 13:51:48,013 INFO: Microblog startup [in C:\Users\user\Downloads\microblog\app\__init__.py:55]
+2026-06-13 11:00:11,653 INFO: Microblog startup [in F:\_projects\flask_practice\app\__init__.py:91]
+2026-06-13 11:03:09,552 INFO: Microblog startup [in F:\_projects\flask_practice\app\__init__.py:91]
+2026-06-13 11:05:26,910 INFO: Microblog startup [in F:\_projects\flask_practice\app\__init__.py:91]
+2026-06-13 11:06:52,498 INFO: Microblog startup [in F:\_projects\flask_practice\app\__init__.py:91]
+2026-06-13 11:09:35,275 INFO: Microblog startup [in F:\_projects\flask_practice\app\__init__.py:91]
+2026-06-13 11:21:47,619 INFO: Microblog startup [in F:\_projects\flask_practice\app\__init__.py:91]
+2026-06-13 11:21:52,666 ERROR: Unhandled exception [in F:\_projects\flask_practice\app\tasks.py:54]
+Traceback (most recent call last):
+  File "F:\_projects\.venv\Lib\site-packages\flask_mail\__init__.py", line 540, in send
+    message.send(connection)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\_projects\.venv\Lib\site-packages\flask_mail\__init__.py", line 482, in send
+    connection.send(self)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "F:\_projects\.venv\Lib\site-packages\flask_mail\__init__.py", line 177, in send
+    self.host.sendmail(
+    ~~~~~~~~~~~~~~~~~~^
+        sanitize_address(envelope_from or message.sender),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        message.rcpt_options,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 873, in sendmail
+    self.ehlo_or_helo_if_needed()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 618, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+                   ~~~~~~~~~^^
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 458, in ehlo
+    self.putcmd(self.ehlo_msg, name or self.local_hostname)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 385, in putcmd
+    self.send(f'{s}{CRLF}')
+    ~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 372, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\_projects\flask_practice\app\tasks.py", line 44, in export_posts
+    send_email(
+    ~~~~~~~~~~^
+        '[Microblog] Your blog posts',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                      json.dumps({'posts': data}, indent=4))],
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        sync=True)
+        ^^^^^^^^^^
+  File "F:\_projects\flask_practice\app\email.py", line 21, in send_email
+    mail.send(msg)
+    ~~~~~~~~~^^^^^
+  File "F:\_projects\.venv\Lib\site-packages\flask_mail\__init__.py", line 539, in send
+    with self.connect() as connection:
+         ~~~~~~~~~~~~^^
+  File "F:\_projects\.venv\Lib\site-packages\flask_mail\__init__.py", line 136, in __exit__
+    self.host.quit()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 1005, in quit
+    res = self.docmd("quit")
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 438, in docmd
+    self.putcmd(cmd, args)
+    ~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 385, in putcmd
+    self.send(f'{s}{CRLF}')
+    ~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 372, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+2026-06-13 11:29:12,909 ERROR: Unhandled exception [in F:\_projects\flask_practice\app\tasks.py:54]
+Traceback (most recent call last):
+  File "F:\_projects\.venv\Lib\site-packages\flask_mail\__init__.py", line 540, in send
+    message.send(connection)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\_projects\.venv\Lib\site-packages\flask_mail\__init__.py", line 482, in send
+    connection.send(self)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "F:\_projects\.venv\Lib\site-packages\flask_mail\__init__.py", line 177, in send
+    self.host.sendmail(
+    ~~~~~~~~~~~~~~~~~~^
+        sanitize_address(envelope_from or message.sender),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        message.rcpt_options,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 873, in sendmail
+    self.ehlo_or_helo_if_needed()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 618, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+                   ~~~~~~~~~^^
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 458, in ehlo
+    self.putcmd(self.ehlo_msg, name or self.local_hostname)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 385, in putcmd
+    self.send(f'{s}{CRLF}')
+    ~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 372, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\_projects\flask_practice\app\tasks.py", line 44, in export_posts
+    send_email(
+    ~~~~~~~~~~^
+        '[Microblog] Your blog posts',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                      json.dumps({'posts': data}, indent=4))],
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        sync=True)
+        ^^^^^^^^^^
+  File "F:\_projects\flask_practice\app\email.py", line 21, in send_email
+    mail.send(msg)
+    ~~~~~~~~~^^^^^
+  File "F:\_projects\.venv\Lib\site-packages\flask_mail\__init__.py", line 539, in send
+    with self.connect() as connection:
+         ~~~~~~~~~~~~^^
+  File "F:\_projects\.venv\Lib\site-packages\flask_mail\__init__.py", line 136, in __exit__
+    self.host.quit()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 1005, in quit
+    res = self.docmd("quit")
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 438, in docmd
+    self.putcmd(cmd, args)
+    ~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 385, in putcmd
+    self.send(f'{s}{CRLF}')
+    ~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Користувач\AppData\Local\Python\pythoncore-3.14-64\Lib\smtplib.py", line 372, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first

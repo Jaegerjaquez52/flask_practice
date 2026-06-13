@@ -1,0 +1,92 @@
+services:
+  web:
+    build: .
+    container_name: microblog
+    ports:
+      - "8000:5000"
+    env_file: .env
+    environment:
+      DATABASE_URL: mysql+pymysql://microblog:123@mysql/microblog
+      REDIS_URL: redis://redis:6379/0
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+      LOG_TO_STDOUT: "true"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      elasticsearch:
+        condition: service_healthy
+    restart: unless-stopped
+
+  worker:
+    build: .
+    container_name: rq-worker
+    entrypoint: python
+    command:
+      - -c
+      - |
+        from rq import Worker, Queue
+        from redis import Redis
+        import os
+        conn = Redis.from_url(os.environ['REDIS_URL'])
+        q = Queue('microblog-tasks', connection=conn)
+        Worker([q], connection=conn).work()
+    env_file: .env
+    environment:
+      DATABASE_URL: mysql+pymysql://microblog:123@mysql/microblog
+      REDIS_URL: redis://redis:6379/0
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+      LOG_TO_STDOUT: "true"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    restart: unless-stopped
+
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: microblog
+      MYSQL_USER: microblog
+      MYSQL_PASSWORD: "123"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-prootpass"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+
+  redis:
+    image: redis:7
+    container_name: redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  elasticsearch:
+    image: elasticsearch:8.11.1
+    container_name: elasticsearch
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:9200/_cluster/health?wait_for_status=yellow&timeout=5s || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 12
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
+  elasticsearch_data:
